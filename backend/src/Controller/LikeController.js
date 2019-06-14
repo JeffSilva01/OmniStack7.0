@@ -1,4 +1,4 @@
-const Post = require("../Model/Post");
+const Post = require('../Model/Post');
 
 module.exports = {
   async store(req, res) {
@@ -8,8 +8,8 @@ module.exports = {
 
     await post.save();
 
-    req.io.emit("like", post);
+    req.io.emit('like', post);
 
     return res.json(post);
-  }
+  },
 };
